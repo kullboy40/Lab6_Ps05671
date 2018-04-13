@@ -1,0 +1,317 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<script src="js/menu.js" ></script>
+<script type="text/javascript" src="js/zoom-anh.js"></script>
+<title>Liên hệ</title>
+<link href="Css/top.css" rel="stylesheet" type="text/css">
+<link href="Css/header.css" rel="stylesheet" type="text/css">
+<link href="Css/menutab.css" rel="stylesheet" type="text/css">
+<link href="Css/footer.css" rel="stylesheet" type="text/css">
+<link href="Css/navigation.css" rel="stylesheet" type="text/css">
+<link href="Css/leftcontent.css" rel="stylesheet" type="text/css">
+<link href="Css/centercontent.css" rel="stylesheet" type="text/css">
+<link href="Css/rightcontent.css" rel="stylesheet" type="text/css">
+<link href="Css/detail.css" rel="stylesheet" type="text/css">
+<link href="Css/slideshow.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+	<div class="main">
+    	<div class="top">
+        	<div class="language">
+   	  			<div>Ngôn ngữ:</div>
+                <a href="#"><img src="images/en.png" alt="EN"/></a>
+                <a href="#"><img src="images/de.png" alt="DE"/></a>
+            </div>
+            <div class="search">
+            	<div class="search_text"><a href="#"><h4>Tìm kiếm nâng cao:</h4></a></div>
+                <input type="text" class="search_input" name="search">
+                <input type="image" src="images/search.png" class="search_bt"/>
+            </div>
+        </div>
+         <div class="header">
+   	        <div class="slideshow-container">
+                <div class="mySlides fade">
+                  <div class="numbertext">1 / 3</div>
+                  <img src="images/header1.jpg" width="1000" height="250">                 
+                </div>                
+                <div class="mySlides fade">
+                  <div class="numbertext">2 / 3</div>
+                  <img src="images/img2.jpg" width="1000" height="250">
+                </div>               
+                <div class="mySlides fade">
+                  <div class="numbertext">3 / 3</div>
+                  <img src="images/img3.jpg" width="1000" height="250">                
+                </div>
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>                
+            </div>
+            <div style="text-align:center">
+                <span class="dot" onclick="currentSlide(1)"></span> 
+                <span class="dot" onclick="currentSlide(2)"></span> 
+                <span class="dot" onclick="currentSlide(3)"></span>
+			</div>
+       </div>
+        <script>
+				var slideIndex = 1;
+				showSlides(slideIndex);
+				
+				function plusSlides(n) {
+				  showSlides(slideIndex += n);
+				}
+				
+				function currentSlide(n) {
+				  showSlides(slideIndex = n);
+				}
+				
+				function showSlides(n) {
+				 
+				  var i;
+				  var slides = document.getElementsByClassName("mySlides");
+				  var dots = document.getElementsByClassName("dot");
+				  if (n > slides.length) {slideIndex = 1}    
+				  if (n < 1) {slideIndex = slides.length}
+				  for (i = 0; i < slides.length; i++) {
+					  slides[i].style.display = "none";  
+				  }
+				  for (i = 0; i < dots.length; i++) {
+					  dots[i].className = dots[i].className.replace(" active", "");
+				  }
+				  slides[slideIndex-1].style.display = "block";  
+				  dots[slideIndex-1].className += " active";
+				}
+			</script>
+        <div class="clr"></div>
+             	
+        <div class="content">
+        	<!-- menu tab --> 
+        	<div id="Menu">
+        	<ul id="sddm">
+        	<li><a href="index.html">Trang chủ</a></li>
+            <li><a href="Gioithieu.html">Giới thiệu</a></li>   
+            <li><a href="#" 
+                onmouseover="mopen('m1')" 
+                onmouseout="mclosetime()">Sản phẩm</a>
+                <div id="m1" 
+                    onmouseover="mcancelclosetime()" 
+                    onmouseout="mclosetime()">
+                <h3>Laptop</h3>
+                	<a href="Lienhe.html">MSI (Macbook)</a>
+                    <a href="#">Asus</a>
+                    <a href="#">Dell</a>
+                <h3>Apple</h3>
+                    <a href="#">Iphone 6s Plus 128GB</a>
+                    <a href="#">Iphone 6s Plus 64GB</a>
+                    <a href="#">Iphone 6s 64GB</a>
+                <h3>Samsung</h3>
+                    <a href="#">Samsung Galaxy S6 Edge Plus</a>
+                    <a href="#">Samsung Galaxy S7 Edge</a>
+                    <a href="#">Samsung Galaxy Note 5</a>
+                <h3>Asus</h3>
+    				<a href="#">Zonfone 2 2.3Ghz 32G</a>
+    				<a href="#">Zenfone Selfie</a>
+    				<a href="#">Asus Zenfone Max</a>
+                </div>
+            </li>
+            <li><a href="#" 
+                onmouseover="mopen('m2')" 
+                onmouseout="mclosetime()">Phụ kiện</a>
+                <div id="m2" 
+                    onmouseover="mcancelclosetime()" 
+                    onmouseout="mclosetime()">
+                     <h3>Các sản phẩm phụ kiện</h3>
+    				<a href="#">USB-Ổ cứng</a>
+    				<a href="#">Ba lô-túi xách</a>
+    				<a href="#">Bao da, ốp lưng</a>
+                    <a href="#">Miếng dán màn hình</a>
+                    <a href="#">Sạc cáp, sạc dự phòng</a>
+                    <a href="#">Tai nghe, chuột</a>
+                    <a href="#">Thẻ nhớ, loa, bàn phím</a>
+                    <a href="#">TV Box, máy chơi game</a>
+                    <a href="#">Các phụ kiện khác</a>
+                </div>
+            </li>
+            <li><a href="#">Tin hay</a></li>
+            <li><a href="#">Hỏi đáp</a></li>
+            <li><a href="Dangki.html">Đăng kí</a></li>
+            <li><a href="Dangnhap.html">Đăng nhập</a></li>
+    	</ul>
+        <div style="clear:both"></div>	
+		</div>	
+            <!-- Navigation -->	
+			<div class="navigation">
+				Danh mục: <a href="index.html">Trang chủ</a>&raquo;<span class="current">Phụ kiện</span>
+    		</div>
+            <!-- left content --> 
+    		<div class="left_content">
+    		<div class="title_box">Loại</div>
+        	<ul class="left_menu">
+        	<li class="odd"><a href="#">Điện Thoại di động</a>
+            <li class="even"><a href="#">Máy tính bảng</a></li>
+        	<li class="odd"><a href="#">Laptop</a></li>
+       	 	<li class="even"><a href="#">Phụ kiện</a></li>
+        	<li class="odd"><a href="#">Thiết bị tin học</a></li>
+        	<li class="even"><a href="#">Máy cũ giá rẻ</a></li>
+        	<li class="odd"><a href="#">Sim, thẻ</a></li>
+        	<li class="even"><a href="#">Bo mạch chủ</a></li>
+        	<li class="odd"><a href="#">Xả hàng</a></li>
+        	<li class="even"><a href="#">Khuyến mãi</a></li>
+       	 	<li class="odd"><a href="#">Tin hay</a></li>
+        	<li class="even"><a href="#">Hỏi đáp</a></li>
+       		</ul>
+    		<div class="title_box">Sản phẩm đặc biệt</div>
+     		<div class="border_box">
+        		<div class="product_title"><a href="#">Asus K401LB-FR119D</a></div>
+        		<div class="product_img"><a href="#"><img src="images/laptop2.png" width="95" height="80" alt="Laptop"></a></div>
+        		<div class="prod_price"><span class="reduce">350$</span><span class="price">270$</span></div>
+            </div>
+            <div class="title_box">Bản tin</div>
+      		<div class="border_box">
+        		<input type="text" name="newsletter" class="newsletter_input" value="your email">
+        		<a href="#" class="join">T.gia</a>
+            </div>
+      		<div class="banner_adds">
+            	<a href="#"><img src="images/bann2.jpg" alt="Banner" border="0"></a>
+            </div> 
+            </div>
+            <!-- center content -->   
+    		<div class="center_content">
+            	<div class="center_title_bar">MSI GT83VR 6RF</div>
+                <div class="prod_box_big">
+            		<div class="top_prod_box_big"></div>
+            		<div class="center_prod_box_big">
+                    	<div class="product_img_big">
+                        	<a href="Lienhe.html"><img src="images/laptop.png" width="120" height="90" alt="Laptop"/></a>
+                        	<div class="thumbs">
+                        		<a href="#"><img src="images/laptop.gif" width="30" height="29" alt="Laptop"/></a>
+                            	<a href="#"><img src="images/laptop.gif" width="30" height="29" alt="Laptop"/></a>
+                            	<a href="#"><img src="images/laptop.gif" width="30" height="29" alt="Laptop"/></a>		
+                        	</div>
+                        </div>
+                    	<div class="details_big_box">
+                        	<div class="product_title_big">My Cinema-U3000/DVBT, USB 2.0 TV BOX External, White</div>
+                            <div class="specifications"> Disponibilitate: <span class="blue">In stoc</span><br />
+              					Garantie: <span class="blue">24 luni</span><br />
+              					Tip transport: <span class="blue">Mic</span><br />
+              					Pretul include <span class="blue">TVA</span><br />
+            				</div>
+                            <div class="prod_price_big"><span class="reduce">350$</span> <span class="price">270$</span></div>
+                            <a href="#" class="addtocart">Thêm vào giỏ</a>
+                            <a href="#" class="compare">So sánh</a>	
+                        </div>
+                   	</div>
+                    <div class="botoom_prod_box_big"></div>   	
+				</div>
+               
+            	<div class="center_title_bar">Sản phẩm khuyến mãi</div>
+            <!-- Product -->     
+                <div class="prod_box">
+                	<div class="top_prod_box"></div>
+                    <div class="center_prod_box">                    	     					
+        				<div class="product_title"><a href="#">MSI GT83VR 6RF</a></div>
+        				<div class="product_img">
+                        <a href="#"><img src="images/laptop.gif" width="100" height="80" alt="Laptop"/></a></div>
+        				<div class="prod_price"><span class="reduce">350$</span><span class="price">270$</span></div>            
+            		</div>
+                    <div class="bottom_prod_box"></div>
+                    <div class="prod_details_tab">
+                    	<a href="#"><img src="images/cart.gif" alt="Cart" class="left_bt"/></a>
+                        <a href="#"><img src="images/favs.gif" alt="Speacials" class="left_bt"/></a>
+                        <a href="#"><img src="images/favorites.gif" alt="Gift" class="left_bt"/></a>
+                        <a href="#" class="prod_details">C.tiết</a>
+                    </div>
+                    <div class="bottom_prod_box_big"></div>  
+                </div>
+            <!-- Product -->     
+               	 <div class="prod_box">
+                	<div class="top_prod_box"></div>
+                    <div class="center_prod_box">                    	     					
+        				<div class="product_title"><a href="#">Iphone Apple</a></div>
+        				<div class="product_img"><a href="#"><img src="images/p4.gif" alt="Laptop"></a></div>
+        				<div class="prod_price"><span class="reduce">350$</span><span class="price">270$</span></div>            
+            		</div>
+                    <div class="bottom_prod_box"></div>
+                    <div class="prod_details_tab">
+                    	<a href="#"><img src="images/cart.gif" alt="Cart" class="left_bt"/></a>
+                        <a href="#"><img src="images/favs.gif" alt="Speacials" class="left_bt"/></a>
+                        <a href="#"><img src="images/favorites.gif" alt="Gift" class="left_bt"/></a>
+                        <a href="#" class="prod_details">C.tiết</a>
+                    </div>  
+                </div>
+            <!-- Product -->     
+            	<div class="prod_box">
+                	<div class="top_prod_box"></div>
+                    <div class="center_prod_box">                    	     					
+        				<div class="product_title"><a href="#">Webcam Samsung</a></div>
+        				<div class="product_img"><a href="#"><img src="images/p5.gif" alt="Laptop"></a></div>
+        				<div class="prod_price"><span class="reduce">350$</span><span class="price">270$</span></div>            
+            		</div>
+                    <div class="bottom_prod_box"></div>
+                    <div class="prod_details_tab">
+                    	<a href="#"><img src="images/cart.gif" alt="Cart" class="left_bt"/></a>
+                        <a href="#"><img src="images/favs.gif" alt="Speacials" class="left_bt"/></a>
+                        <a href="#"><img src="images/favorites.gif" alt="Gift" class="left_bt"/></a>
+                        <a href="#" class="prod_details">C.tiết</a>
+                    </div>  
+                </div>                                
+    		</div>	           
+            <!-- right content --> 
+     		<div class="right_content">
+           		<div class="shopping_cart">
+        			<div class="cart_title">Giỏ hàng</div>
+        				<div class="cart_details"> 
+        					3 mặt hàng<br>
+        					<span class="border_cart"></span> 
+            				Tổng cộng: <span class="price">350$</span> 
+        				</div>
+       				<div class="cart_icon">
+            			<a href="#"><img src="images/shoppingcart.png" alt"Checkout"/></a> 								
+      				</div>
+                </div>   
+            	<div class="title_box">Có gì mới</div>
+     			<div class="border_box">
+        			<div class="product_title"><a href="#">Asus K401LB-FR119D</a></div>
+        			<div class="product_img"><a href="#"><img src="images/laptop2.png" width="95" height="100" alt="Laptop"></a></div>
+        			<div class="prod_price"><span class="reduce">350$</span><span class="price">270$</span></div>
+            	</div>
+            	<div class="title_box">Các nhà sản xuất</div>
+        		<ul class="left_menu">
+        			<li class="odd"><a href="#">Apple</a></li>
+            		<li class="even"><a href="#">Samsung</a></li>
+        			<li class="odd"><a href="#">Oppo</a></li>
+       	 			<li class="even"><a href="#">Nokia</a></li>
+        			<li class="odd"><a href="#">Sony</a></li>
+        			<li class="even"><a href="#">Lenovo</a></li>
+        			<li class="odd"><a href="#">Philips</a></li>
+        			<li class="even"><a href="#">Coolpad</a></li>
+        			<li class="odd"><a href="#">Mobiistar</a></li>
+       			</ul>
+            	<div class="banner_adds">
+            		<a href="#"><img src="images/bann1.jpg" alt="Banner" border="0"></a>
+            	</div>      	
+         	</div>
+  	</div>
+<!-- Footer -->
+<div class="clr"></div>            
+	<div class="footer">
+    	<div class="left_footer">
+    		<a href=""><img src="Images/footer_logo.png"></a>	
+    	</div>
+    	<div class="center_footer">
+			<p>Bản quyền &copy; 2012 thuộc công ty Phong Vũ.<br/>Trụ sở: 125 Cách Mạng Tháng 8, Phường Bến Thành, Quận 1, Tp HCM.<br/>Chi nhánh: 264A-264B-264C Nguyễn Thị Minh Khai, Phường 6. Quận 3, TPHCM.</p>
+ 		  	<div class="hotro"><p>Hỗ trợ:<strong>1900 545419</strong></p></div>
+            <a href=""><img src="images/payment.gif" width="141" height="20">
+   	  	</div>
+        <div class="right_footer">
+        	<a href="">Home</a>
+            <a href="">About</a>
+            <a href="">Sitemap</a>
+            <a href="">Rss</a>
+            <a href="">Contact us</a>				
+        </div>
+    </div> 		
+</div>
+</body>
+</html>
